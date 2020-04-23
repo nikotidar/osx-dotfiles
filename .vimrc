@@ -1,5 +1,5 @@
-set nocompatible
-filetype off
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -10,21 +10,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-" My plugin
-Plugin 'mhinz/vim-startify'
-Plugin 'ycm-core/YouCompleteMe'
-Plugin 'scrooloose/nerdtree'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'jaxbot/semantic-highlight.vim'
-Plugin 'vim-syntastic/syntastic'
-Plugin 'majutsushi/tagbar'
-Plugin 'godlygeek/tabular'
-Plugin 'dikiaap/minimalist'
-Plugin 'tpope/vim-pathogen'
-Plugin 'metakirby5/codi.vim'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-
+execute pathogen#infect()
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -75,6 +61,15 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:airline_theme='minimalist'
 let g:NERDTreeWinPos = "left"
+
+call plug#begin('~/.vim/plugged')
+Plug 'metakirby5/codi.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+call plug#end()
+
+nnoremap <S-N> :tabprevious<CR>
+nnoremap <S-M> :tabnext<CR>
 
 let g:startify_custom_header = [
 \'                                 ___     ' ,
