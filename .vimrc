@@ -1,3 +1,6 @@
+" Extend syntax {{{
+au BufEnter * :source ~/.vim/extend-syntax.vim
+
 " Encoding {{{
 
 set encoding=utf-8
@@ -563,6 +566,9 @@ cnoremap W: w
 call plug#begin('~/.vim/plugged')
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'Yggdroot/indentLine'
+Plug 'benbusby/earthbound-themes', {'rtp': 'vim/' }
+Plug 'decrement/logos.vim'
+Plug 'preservim/nerdtree'
 Plug 'alvan/vim-closetag'
 Plug 'arthurxavierx/vim-caser'
 Plug 'editorconfig/editorconfig-vim'
@@ -583,9 +589,9 @@ Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-surround'
 Plug 'yegappan/mru'
-Plug 'git@github.com:kkoomen/onedark.vim'
-Plug 'git@github.com:kkoomen/vim-doge'
-Plug 'git@github.com:kkoomen/vim-readdir'
+Plug 'kkoomen/onedark.vim'
+Plug 'kkoomen/vim-doge'
+Plug 'kkoomen/vim-readdir'
 call plug#end()
 
 " }}}
@@ -619,7 +625,7 @@ let g:onedark_color_overrides = {
 
 set background=dark
 set termguicolors
-" colorscheme onedark
+colorscheme fire-spring-darker
 
 " }}}
 " Custom Highlighting {{{
@@ -784,9 +790,6 @@ let g:gutentags_ctags_exclude = [
       \ ]
 
 " }}}
-" Plugins: Polyglot {{{
-
-let g:polyglot_disabled = ['markdown']
 
 " JSX
 " ------------------------------------------------------------------------------
@@ -980,7 +983,7 @@ function LightlineFiletype() abort
 endfunction
 
 let g:lightline = {
-\  'colorscheme': 'onedark',
+\  'colorscheme': 'default',
 \  'active': {
 \    'left': [
 \      ['mode', 'paste'],
@@ -1034,5 +1037,17 @@ let g:lightline#bufferline#filename_modifier = ':p:gs?/\([^/]\+/\)*\([^/]\+/[^/]
 " Plugins: Caser {{{
 
 let g:caser_prefix = 'ac'
+
+" }}}
+
+" Plugins: NERDTree {{{
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
+
+" }}}
+
+" Plugins: macos-theme {{{
+:autocmd FocusLost * :colo macos-inactive | :AirlineTheme monochrome
+:autocmd FocusGained * :colo macos | :AirlineTheme base16_bright
 
 " }}}
