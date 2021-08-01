@@ -6,6 +6,9 @@ export GPG_TTY=`tty`
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/jas0n/.oh-my-zsh"
+export ZSH_CONFIG="/Users/jas0n/.config/zsh"
+export RECON_TOOLS="/Users/jas0n/Tools"
+
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -75,7 +78,9 @@ ZSH_THEME="afowler"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(osx brew zsh-autosuggestions zsh-syntax-highlighting zsh-history-substring-search zsh-completions)
 
+# Custom zsh path, function and aliases
 source $ZSH/oh-my-zsh.sh
+source $ZSH_CONFIG/recon
 
 # User configuration
 
