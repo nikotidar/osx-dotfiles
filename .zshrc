@@ -1,3 +1,9 @@
+# SDK
+export SDKROOT=$(xcrun --sdk macosx --show-sdk-path)
+
+# Java JVM
+export _JAVA_OPTS="-Xmx2G"
+
 # GPG
 export GPG_TTY=`tty`
 
