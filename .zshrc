@@ -90,6 +90,9 @@ source $ZSH_CONFIG/recon
 
 # User configuration
 
+# Gcloud instance
+alias stockbit-reckon='gcloud compute ssh stockbit-reckon --tunnel-through-iap --project stockbit-api-dev --zone asia-southeast2-a'
+
 # User's python environment
 export PATH=/Users/jas0n/Library/Python/3.9/bin:$PATH
 
