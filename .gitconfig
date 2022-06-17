@@ -3,17 +3,17 @@
 	excludesfile = ~/.gitignore
 	pager = diff-so-fancy | less --tabs=4 -RFX
 [user]
-	email = niko.tidar@outlook.com
+	email = me.rndtx@gmail.com
 	name = Niko Tidar Lantang Perkasa
-	signingkey = 5DEC4A0C
+	signingkey = 5850E5A4
 [push]
 	default = simple
 [color]
 	ui = true
 [alias]
-	ls = log --oneline --graph --decorate
-	graph = log --graph --pretty=format:\
-"%C(yellow)%h%Creset%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)%an%Creset"
+	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+	graph = log --graph --pretty="format:%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]"
+	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
 [credential "https://github.com"]
 	username = nikotidar
 
