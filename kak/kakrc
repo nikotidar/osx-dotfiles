@@ -1,3 +1,13 @@
+# Auto install plug
+evaluate-commands %sh {
+  plugins="$kak_config/plugins"
+  mkdir -p "$plugins"
+  [ ! -e "$plugins/plug.kak" ] && \
+  git clone -q https://github.com/andreyorst/plug.kak.git "$plugins/plug.kak"
+  printf "%s\n" "source '$plugins/plug.kak/rc/plug.kak'"
+}
+plug "andreyorst/plug.kak" noload
+
 # Width of a tab
 set-option global tabstop 2
 
@@ -35,10 +45,6 @@ hook global InsertIdle do %{
 hook global NormalIdle do %{
   write-all
 }
-
-# Plug.kak
-source "%val{config}/plugins/plug.kak/rc/plug.kak"
-plug "andreyorst/plug.kak" noload
 
 # Kak-lsp
 try %sh{
