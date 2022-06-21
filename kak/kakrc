@@ -1,18 +1,19 @@
 # Auto install plug
-evaluate-commands %sh {
-  plugins="$kak_config/plugins"
-  mkdir -p "$plugins"
-  [ ! -e "$plugins/plug.kak" ] && \
-  git clone -q https://github.com/andreyorst/plug.kak.git "$plugins/plug.kak"
-  printf "%s\n" "source '$plugins/plug.kak/rc/plug.kak'"
+evaluate-commands %sh{
+    plugins="$kak_config/plugins"
+    mkdir -p "$plugins"
+    [ ! -e "$plugins/plug.kak" ] && \
+        git clone -q https://github.com/andreyorst/plug.kak.git "$plugins/plug.kak"
+    printf "%s\n" "source '$plugins/plug.kak/rc/plug.kak'"
 }
+plug "andreyorst/plug.kak" noload
 plug "andreyorst/plug.kak" noload
 
 # Width of a tab
-set-option global tabstop 2
+set-option global tabstop 4
 
 # Indent with 2 spaces
-set-option global indentwidth 2
+set-option global indentwidth 4
 
 # Use tab for autocompletion
 hook global InsertCompletionShow .* %{
