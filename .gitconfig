@@ -5,7 +5,7 @@
 [user]
 	email = me.rndtx@gmail.com
 	name = Niko Tidar Lantang Perkasa
-	signingkey = 5850E5A4
+	signingkey = E6568A95
 [push]
 	default = simple
 [color]
@@ -37,7 +37,7 @@
 	useUnicodeRuler = false
 	rulerWidth = 47
 [gpg]
-	program = /usr/local/bin/gpg
+	program = /opt/homebrew/bin/gpg
 [commit]
 	gpgsign = true
 [init]
