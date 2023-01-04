@@ -1,0 +1,33 @@
+/* monospaced font */
+* { font-family: "Iosevka Nerd Font" !important; }
+/* themeing*/
+.theme-dark {
+  --background-primary: #161616;
+  --background-secondary: #262626;
+  --background-tertiary: #525252;
+  --background-secondary-alt: #393939;
+  --channeltextarea-background: #262626;
+  --interactive-muted: #ee5396;
+  --background-floating: #262626;
+  --text-normal: #ffffff;
+  --header-primary: #f2f4f8;
+  --interactive-active: #be95ff;
+  --background-accent: #262626;
+}
+.theme-dark .container-1D34oG {
+  background-color: #161616;
+}
+.categoryHeader-O1zU94, .theme-dark .autocomplete-1vrmpx {
+  background-color: #161616;
+}
+.theme-dark .selected-1Tbx07 {
+  background-color: #393939;
+}
+/* minimal looks*/
+[aria-label="Servers sidebar"],
+[class*="chat-"] > [class*="content-"]::before,
+[class*="repliedMessage-"]::before,
+::-webkit-scrollbar,
+[class*="form-"] [class*="attachWrapper-"],
+[class*="form-"] [class*="buttons-"],
+'';

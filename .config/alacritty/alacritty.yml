@@ -1,0 +1,58 @@
+# window padding
+window:
+  padding:
+    x: 15
+    y: 15
+
+  decorations: "none"
+
+  hide_when_typing: true
+  use_thin_strokes: true
+
+# cursor
+cursor:
+  style: Beam
+
+# font
+font:
+  normal:
+    family: Iosevka Nerd Font
+    style: Light
+
+  bold:
+    family: Iosevka Nerd Font
+    style: Bold
+
+  italic:
+    family: Iosevka Nerd Font
+    style: Italic
+
+  size: 15
+
+# colors
+colors:
+  primary:
+    background: '#161616'
+    foreground: '#ffffff'
+
+  cursor:
+    cursor: '#dde1e6'
+
+  normal:
+    black: '#161616'
+    red: '#33b1ff'
+    green: '#ff7eb6'
+    blue: '#42be65'
+    magenta: '#82cfff'
+    cyan: '#78a9ff'
+    white: '#dde1e6'
+
+  bright:
+    black: '#525252'
+    red: '#33b1ff'
+    green: '#ff7eb6'
+    yellow: '#42be65'
+    blue: '#08bdba'
+    magenta: '#82cfff'
+    cyan: '#78a9ff'
+    white: '#ffffff'
